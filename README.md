@@ -1,3 +1,6 @@
+
+git remote add origin https://github.com/cyr1402123126/vue-project.git
+git push -u origin master
 # cms-project
 
 > A Vue.js project
