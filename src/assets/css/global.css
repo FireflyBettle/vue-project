@@ -53,4 +53,8 @@ img {
 }
 .temp {
   margin-bottom: 40px;
+  margin-top: 40px;
+}
+.mint-cell-wrapper {
+  align-items: normal;
 }

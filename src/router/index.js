@@ -7,6 +7,7 @@ import Search from '@/components/search/Search'
 import NewList from '@/components/news/NewList'
 import NewDetail from '@/components/news/NewDetail'
 import PhotoList from '@/components/news/PhotoList'
+import Comment from '@/components/comment/Comment'
 
 Vue.use(Router)
 
@@ -20,6 +21,7 @@ export default new Router({
     {path: '/search',name: 'Search',component: Search},
     {path: '/news',name: 'news',component: NewList},
     {path: '/news/detail',name: 'news.detail',component: NewDetail},
-    {path: '/photo/list/:categoryId',name: 'photo.list',component: PhotoList}
+    {path: '/photo/list/:categoryId',name: 'photo.list',component: PhotoList},
+    {path: '/comment',name: 'comment',component: Comment}
   ]
 })
