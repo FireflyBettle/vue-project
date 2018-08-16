@@ -26,6 +26,19 @@ Vue.filter('moment',(data,formateStr)=>{
 })
 Moment.locale('zh-cn')
 
+//拦截器
+axios.interceptors.request.use(config=>{
+  MintUI.Indicator.open({
+    text: '加载中...',
+    spinnerType: 'fading-circle'
+  });
+  return config;
+})
+axios.interceptors.response.use(respone=>{
+  MintUI.Indicator.close();
+  return respone;
+})
+
 
 Vue.config.productionTip = false
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';

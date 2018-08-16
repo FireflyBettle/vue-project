@@ -58,3 +58,6 @@ img {
 .mint-cell-wrapper {
   align-items: normal;
 }
+p {
+  font-size: 14px;
+}

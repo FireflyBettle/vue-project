@@ -10,10 +10,12 @@
         </div>
         <p>{{content.content}}</p>
       </div>
+      <Comment></Comment>
     </div>
 </template>
 
 <script>
+  import Comment from '@/components/news/Comment'
   export default {
     name: "NewDetail",
     data(){
@@ -24,8 +26,10 @@
         imgs:[]
       }
     },
+    components:{
+      Comment
+    },
     created(){
-      console.log(this.$route.query.id);
       this.axios.get('news/'+this.$route.query.id).then(res=>{
         res.data.src.forEach(value=>{
           value.img=require('../../assets/images/photo/'+value.img);
@@ -34,7 +38,7 @@
           value.w=600;
           value.h=400;
         })
-        console.log(res.data);
+        // console.log(res.data);
         this.content=res.data;
       }).catch(err=>{
         console.log(err);
