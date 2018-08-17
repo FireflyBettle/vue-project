@@ -61,3 +61,6 @@ img {
 p {
   font-size: 14px;
 }
+.mint-loadmore-bottom {
+  line-height: 0;
+}
