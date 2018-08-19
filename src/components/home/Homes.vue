@@ -1,11 +1,6 @@
 <template>
   <div>
-    <mt-swipe :auto="40000" class="slider">
-      <mt-swipe-item v-for="(item,index) in slide" :key="index">
-        <img :src="item.src" alt="">
-        <!--<img src="../../assets/images/slide1.jpg" alt="">-->
-      </mt-swipe-item>
-    </mt-swipe>
+    <Slide :url="slide" />
     <div class="wrap">
       <my-ul>
         <my-li v-for="(img,index) in imgs" :key="index">
@@ -26,12 +21,12 @@
     name: "homes",
     data(){
       return{
-        slide:[],
+        slide:'slide',
         imgs:[]
       }
     },
     created(){
-      let _this=this;
+      /*let _this=this;
       function Slide() {
         return _this.axios.get('slide');
       }
@@ -49,7 +44,18 @@
         this.imgs=two.data;
       })).catch(err=>{
         console.log(err);
+      })*/
+
+
+      this.axios.get('imgs').then(res=>{
+        res.data.forEach(value=>{
+          value.src=require('../../assets/images/icons/'+value.src)
+        })
+        this.imgs=res.data;
+      }).catch(err=>{
+        console.log(err);
       })
+
       /*this.axios.get('slide').then(res=>{
         res.data.forEach((value,index)=>{
           value.src=require('../../assets/images/'+value.src)

@@ -1,12 +1,14 @@
 <template>
     <div>
       <nav-bar :title="title" :path="path"></nav-bar>
-      <mt-loadmore  :top-method="loadTop" :bottom-method="loadBottom" @top-status-change="handleTopChange" ref="loadmore" :autoFill="false">
+      <mt-loadmore  :top-method="loadTop" :bottom-all-loaded="allLoaded" :bottom-method="loadBottom" @top-status-change="handleTopChange" ref="loadmore" :autoFill="false">
         <ul>
-          <li v-for="item in list">
-            <h3>{{item.title}}</h3>
-            <img v-lazy="item.src" alt="">
-            <p>{{item.content}}</p>
+          <li v-for="item in list" :key="item.id">
+            <router-link :to="{name:'photo.detail',params:{id:item.id}}">
+              <h3>{{item.title}}</h3>
+              <img v-lazy="item.src" alt="">
+              <p>{{item.content}}</p>
+            </router-link>
           </li>
         </ul>
         <div slot="top" class="mint-loadmore-top">
@@ -33,7 +35,8 @@
         path:'/',
         list:[],
         topStatus: '',
-        page:1
+        page:1,
+        allLoaded:false
       }
     },
     created(){
@@ -42,12 +45,17 @@
     methods:{
       getData(id){
         if (id==0) {
-          this.axios.get('photo?_page='+this.page+'&_limit=5').then(res=>{
-            res.data.forEach(value=>{
-              value.src=require('../../assets/images/photo/'+value.src)
+          this.axios.get('photo?_page=' + this.page + '&_limit=5').then(res => {
+            res.data.forEach(value => {
+              value.src = require('../../assets/images/photo/' + value.src);
             })
+            if (res.data.length==0) {
+              this.$toast('无更多数据')
+              this.allLoaded=true;
+            }
             this.page++;
-            this.list=this.list.concat(res.data);
+            this.list = this.list.concat(res.data);
+            this.$refs.loadmore.onBottomLoaded();
           });
         }else {
           this.axios.get('photo',{params:{id:id}}).then(res=>{
@@ -68,7 +76,6 @@
       },
       handleTopChange(status) {
         this.topStatus = status;
-        console.log(status);
       },
     }
   }

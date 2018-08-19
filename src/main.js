@@ -11,12 +11,14 @@ import './assets/css/global.css'
 import MyUl from '@/components/common/MyUl'
 import Myli from '@/components/common/Myli'
 import NavBar from '@/components/common/NavBar'
+import Slide from '@/components/common/Slide'
 import Moment from 'moment'
 import VuePreview from 'vue-preview'
 
 Vue.component(MyUl.name,MyUl)
 Vue.component(Myli.name,Myli)
 Vue.component(NavBar.name,NavBar)
+Vue.component(Slide.name,Slide)
 Vue.use(MintUI)
 Vue.use(VueAxios,axios)
 Vue.use(VuePreview)
