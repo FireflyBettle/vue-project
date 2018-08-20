@@ -48,6 +48,7 @@
             })
             this.page++;
             this.list=this.list.concat(res.data);
+            this.$refs.loadmore.onBottomLoaded();
           });
         }else {
           this.axios.get('photo',{params:{id:id}}).then(res=>{
