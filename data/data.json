@@ -10,6 +10,20 @@
       "src": "slide3.jpg"
     }
   ],
+  "url": [
+    {
+      "src": "slide4.jpg"
+    },
+    {
+      "src": "slide5.jpg"
+    },
+    {
+      "src": "slide6.jpg"
+    },
+    {
+      "src": "slide7.jpg"
+    }
+  ],
   "imgs": [
     {
       "src": "data.png",
@@ -643,6 +657,208 @@
       "title": "空军打死数十名非法武装分子",
       "src": "25.jpg",
       "content": "大陆9家影视公司在今天（8月11日）发表了一份抵制不合理片酬的联合声明"
+    }
+  ],
+  "photoDetail": [
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "1",
+      "marketPrice": 1000,
+      "sellPrice": 3145,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "2",
+      "marketPrice": 1234,
+      "sellPrice": 3564,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "3",
+      "marketPrice": 1111,
+      "sellPrice": 6453,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "4",
+      "marketPrice": 1222,
+      "sellPrice": 5754,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "5",
+      "marketPrice": 1333,
+      "sellPrice": 5874,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "6",
+      "marketPrice": 1444,
+      "sellPrice": 5634,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "7",
+      "marketPrice": 1555,
+      "sellPrice": 4586,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "8",
+      "marketPrice": 1666,
+      "sellPrice": 8742,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "9",
+      "marketPrice": 1777,
+      "sellPrice": 4545,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "10",
+      "marketPrice": 1888,
+      "sellPrice": 4545,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "11",
+      "marketPrice": 1999,
+      "sellPrice": 7844,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "12",
+      "marketPrice": 2000,
+      "sellPrice": 7854,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "13",
+      "marketPrice": 2111,
+      "sellPrice": 4566,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "14",
+      "marketPrice": 2222,
+      "sellPrice": 4565,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "15",
+      "marketPrice": 2233,
+      "sellPrice": 7889,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "16",
+      "marketPrice": 2312,
+      "sellPrice": 7878,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "17",
+      "marketPrice": 4522,
+      "sellPrice": 4545,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "18",
+      "marketPrice": 4742,
+      "sellPrice": 5636,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "19",
+      "marketPrice": 4521,
+      "sellPrice": 6365,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "20",
+      "marketPrice": 1215,
+      "sellPrice": 3665,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "21",
+      "marketPrice": 4567,
+      "sellPrice": 3654,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "22",
+      "marketPrice": 4525,
+      "sellPrice": 1299,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "23",
+      "marketPrice": 4545,
+      "sellPrice": 1299,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "24",
+      "marketPrice": 1000,
+      "sellPrice": 1299,
+      "stock": 60,
+      "time": 20180815
+    },
+    {
+      "title": "华为手机(荣耀6Plus) 16G双4G版",
+      "id": "25",
+      "marketPrice": 1223,
+      "sellPrice": 1299,
+      "stock": 60,
+      "time": 20180815
     }
   ],
   "comment": [
@@ -1363,6 +1579,72 @@
     {
       "id": "122",
       "course_name": "7",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": 140,
+      "course_name": "22",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": "141",
+      "course_name": "988",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": "143",
+      "course_name": "aa",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": 145,
+      "course_name": "a",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": "147",
+      "course_name": "sss",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": 148,
+      "course_name": "高增亮\n",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": "149",
+      "course_name": "999",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": "123",
+      "course_name": "7",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": 124,
+      "course_name": "77",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": "125",
+      "course_name": "77",
+      "author": "邹秀兰",
+      "time": "2018-08-16"
+    },
+    {
+      "id": "126",
+      "course_name": "陈鸿真\n",
       "author": "邹秀兰",
       "time": "2018-08-16"
     }

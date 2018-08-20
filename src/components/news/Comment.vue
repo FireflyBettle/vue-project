@@ -20,14 +20,16 @@
         path:'/',
         introduction:'',
         message:[],
-        id:110,
+        id:145,
         page:1,
         limit:20
       }
     },
     created(){
       this.id=localStorage.getItem('id')
-      console.log(localStorage.getItem('id'));
+      // localStorage.clear();
+      console.log(this.id);
+      // console.log(localStorage.getItem('id'));
       this.getMessage()
     },
     methods:{
