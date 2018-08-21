@@ -13,7 +13,7 @@
       </mt-tab-item>
       <mt-tab-item id="Shop">
         <img @click="change()" slot="icon" src="./assets/images/shop_active.png">
-        购物车
+        购物车<mt-badge size="small" color="#F44336">{{ num }}</mt-badge>
       </mt-tab-item>
       <mt-tab-item id="Search">
         <img @click="change()" slot="icon" src="./assets/images/search_active.png">
@@ -24,13 +24,20 @@
 </template>
 
 <script>
+import EventBus from './EventBus'
 export default {
   name: 'App',
   data(){
     return {
       selected:'',
-      show:true
+      show:true,
+      num:0
     }
+  },
+  created(){
+    EventBus.$on('addShopcart',data=>{
+      this.num=data;
+    })
   },
   methods:{
     change(){

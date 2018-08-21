@@ -3,9 +3,9 @@
       <nav-bar :title="title" :path="path"></nav-bar>
       <Slide :url="slide" />
       <div class="container">
-        <h2>华为手机(荣耀6Plus) 16G双4G版</h2>
+        <h2>{{ info.title }}</h2>
         <ul>
-          <li><span>市场价:111</span>销售价:4444</li>
+          <li><span>市场价:{{ info.marketPrice }}</span>销售价:{{ info.sellPrice }}</li>
           <li style="margin-bottom: 8px">购买数量
             <mt-button size="small" type="primary" @click="decrease()">-</mt-button>
             <span>{{value}}</span>
@@ -19,14 +19,17 @@
             </transition>
           </li>
           <li>商品参数</li>
-          <li>库存情况:</li>
-          <li>上架时间:</li>
+          <li>库存情况:{{ info.stock }}</li>
+          <li>上架时间:{{ info.time | moment('YYYY-MM-DD') }}</li>
+          <li>
+            <mt-button size="large" plain @click.native="joinDetail()">商品详情</mt-button></li>
         </ul>
       </div>
     </div>
 </template>
 
 <script>
+  import EventBus from '@/EventBus'
   export default {
     name: "PhotoDetail",
     data(){
@@ -42,9 +45,7 @@
     created(){
       this.axios.get('photoDetail?id='+this.$route.params.id).then(res=>{
         this.info=res.data[0]
-        console.log(res.data);
       })
-      console.log(this.$route.params.id);
     },
     methods:{
       decrease(){
@@ -53,16 +54,27 @@
           return;
         }
         this.value--;
-
       },
       increase(){
+        if (this.value==this.info.stock) {
+          return
+        }
         this.value++;
       },
       showFly(){
-        this.show=true
+        this.show=true;
       },
       afterEnter(){
-        this.show=false
+        this.show=false;
+        EventBus.$emit('addShopcart',this.value)
+      },
+      joinDetail(){
+        this.$router.push({
+          name:'photo.info',
+          query:{
+            id:parseInt(this.$route.params.id)+30
+          }
+        })
       }
     }
   }
@@ -86,7 +98,7 @@
       transform: translate3d(160px,0,0);
     }
     100% {
-      transform: translate3d(100px,300px,0);
+      transform: translate3d(100px,850px,0);
     }
   }
   .container {

@@ -18,13 +18,11 @@
     props:['url'],
     created(){
       // this.slide=this.url;
-      console.log(this.url);
       this.axios.get(this.url).then(res=>{
         res.data.forEach(value=>{
           value.src=require('../../assets/images/'+value.src)
         })
         this.slide=res.data;
-        console.log(res.data);
       })
     }
   }
