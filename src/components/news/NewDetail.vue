@@ -21,7 +21,7 @@
     data(){
       return {
         title:'新闻列表详情',
-        path:'/news',
+        path:'/',
         content:{},
         imgs:[]
       }
@@ -43,6 +43,25 @@
       }).catch(err=>{
         console.log(err);
       })
+    },
+    beforeRouteEnter(to,from,next){
+      let title='';
+      if (from.name==null) {
+        if (to.name=='news.detail') {
+          title='新闻列表详情';
+        }else if (to.name=='photo.info') {
+          title='图文列表详情';
+        }
+      }else if (from.name=='photo.detail') {
+        title='图文列表详情';
+      }else if (from.name=='news') {
+        title='新闻列表详情';
+      }
+      next(vm=>{
+        vm.path=from.path;
+        vm.title=title;
+      })
+
     }
   }
 </script>

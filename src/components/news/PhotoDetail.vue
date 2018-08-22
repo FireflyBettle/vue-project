@@ -21,8 +21,8 @@
           <li>商品参数</li>
           <li>库存情况:{{ info.stock }}</li>
           <li>上架时间:{{ info.time | moment('YYYY-MM-DD') }}</li>
-          <li>
-            <mt-button size="large" plain @click.native="joinDetail()">商品详情</mt-button></li>
+          <li><mt-button size="large" plain @click.native="joinDetail()">商品详情</mt-button></li>
+          <li><mt-button size="large" plain @click.native="joinComment()">商品评论</mt-button></li>
         </ul>
       </div>
     </div>
@@ -30,6 +30,7 @@
 
 <script>
   import EventBus from '@/EventBus'
+  import GoodsTools from '@/GoodsList'
   export default {
     name: "PhotoDetail",
     data(){
@@ -63,10 +64,25 @@
       },
       showFly(){
         this.show=true;
+        let data={
+          id: "1555sss5",
+          myid: "8399",
+          title: "一加3T",
+          price: 8000,
+          isSelected: false,
+          num: "98ddd9"
+        }
+        this.axios.post('goods',data).then(res=>{
+          console.log(res.data);
+        })
       },
       afterEnter(){
         this.show=false;
-        EventBus.$emit('addShopcart',this.value)
+        EventBus.$emit('addShopcart',this.value);
+        GoodsTools.add({
+          id:this.$route.params.id,
+          num:this.value
+        })
       },
       joinDetail(){
         this.$router.push({
@@ -75,8 +91,13 @@
             id:parseInt(this.$route.params.id)+30
           }
         })
+      },
+      joinComment() {
+        this.$router.push({
+          name:'photo.comment'
+        })
       }
-    }
+    },
   }
 </script>
 

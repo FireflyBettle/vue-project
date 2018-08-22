@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <mt-header fixed title="后台管理系统"></mt-header>
-    <router-view class="temp"/>
+    <transition name="Opacity" mode="out-in">
+      <router-view class="temp"/>
+    </transition>
     <mt-tabbar v-model="selected" class="fixed">
       <mt-tab-item id="Home">
         <img @click="change()" slot="icon" src="./assets/images/home_active.png">
@@ -25,6 +27,7 @@
 
 <script>
 import EventBus from './EventBus'
+import GoodsTools from './GoodsList'
 export default {
   name: 'App',
   data(){
@@ -35,6 +38,7 @@ export default {
     }
   },
   created(){
+    this.num=GoodsTools.getTotalCount();
     EventBus.$on('addShopcart',data=>{
       this.num=data;
     })
@@ -64,5 +68,11 @@ export default {
   .fixed {
     position: fixed;
     bottom: 0;
+  }
+  .Opacity-enter-active,.Opacity-leave-active {
+    transition: opacity .2s;
+  }
+  .Opacity-enter,.Opacity-leave-to {
+    opacity: 0;
   }
 </style>
