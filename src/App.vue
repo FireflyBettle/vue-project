@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <mt-header fixed title="后台管理系统"></mt-header>
+    <mt-header fixed title="后台管理系统" ref="headerHeight"></mt-header>
     <transition name="Opacity" mode="out-in">
-      <router-view class="temp"/>
+      <router-view class="temp" :getHeight="$refs" />
     </transition>
-    <mt-tabbar v-model="selected" class="fixed">
+    <mt-tabbar v-model="selected" class="fixed" ref="footerHeight">
       <mt-tab-item id="Home">
         <img @click="change()" slot="icon" src="./assets/images/home_active.png">
         首页
@@ -70,7 +70,7 @@ export default {
     bottom: 0;
   }
   .Opacity-enter-active,.Opacity-leave-active {
-    transition: opacity .2s;
+    transition: opacity .15s;
   }
   .Opacity-enter,.Opacity-leave-to {
     opacity: 0;

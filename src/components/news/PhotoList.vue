@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div :style="{ height }" >
       <nav-bar :title="title" :path="path"></nav-bar>
-      <mt-loadmore  :top-method="loadTop" :bottom-all-loaded="allLoaded" :bottom-method="loadBottom" @top-status-change="handleTopChange" ref="loadmore" :autoFill="false">
+      <mt-loadmore :top-method="loadTop" :bottom-all-loaded="allLoaded" :bottom-method="loadBottom" @top-status-change="handleTopChange" ref="loadmore" :autoFill="false">
         <ul>
           <li v-for="item in list" :key="item.id">
             <router-link :to="{name:'photo.detail',params:{id:item.id}}">
@@ -36,11 +36,18 @@
         list:[],
         topStatus: '',
         page:1,
-        allLoaded:false
+        allLoaded:false,
+        height:''
       }
     },
+    props:['getHeight'],
     created(){
       this.getData(this.$route.params.categoryId,this.page);
+    },
+    mounted(){
+      let headerHeight=this.getHeight.headerHeight.$el.offsetHeight;
+      let footerHeight=this.getHeight.footerHeight.$el.offsetHeight;
+      this.height=document.body.clientHeight-headerHeight-footerHeight+'px';
     },
     methods:{
       getData(id){

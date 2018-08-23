@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/home/Homes'
+/*import Home from '@/components/home/Homes'
 import Member from '@/components/member/Member'
 import Shop from '@/components/shop/Shop'
 import Search from '@/components/search/Search'
@@ -8,7 +8,16 @@ import NewList from '@/components/news/NewList'
 import NewDetail from '@/components/news/NewDetail'
 import PhotoList from '@/components/news/PhotoList'
 import PhotoDetail from '@/components/news/PhotoDetail'
-import photoComment from '@/components/news/photoComment'
+import photoComment from '@/components/news/photoComment'*/
+const Home =()=>import('@/components/home/Homes');
+const Member =()=>import('@/components/member/Member');
+const Shop =()=>import('@/components/shop/Shop');
+const Search =()=>import('@/components/search/Search');
+const NewList =()=>import('@/components/news/NewList');
+const NewDetail =()=>import('@/components/news/NewDetail');
+const PhotoList =()=>import('@/components/news/PhotoList');
+const PhotoDetail =()=>import('@/components/news/PhotoDetail');
+const photoComment =()=>import('@/components/news/photoComment');
 
 Vue.use(Router)
 
